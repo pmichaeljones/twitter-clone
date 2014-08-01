@@ -1,0 +1,9 @@
+<%= render 'shared/header', title: "User Profile Page" %>
+
+<%= link_to "@#{@user.username}", user_path(@user.username) %>
+
+<ul>
+  <% @user.statuses.each do |status| %>
+    <li><%= status.body %></li>
+  <% end %>
+</ul>

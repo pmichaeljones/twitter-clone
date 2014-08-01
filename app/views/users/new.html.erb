@@ -1,0 +1,15 @@
+<%= render 'shared/header', title: "Register a New User" %>
+<%= render 'shared/errors', obj: @user %>
+
+<%= form_for @user do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <br/>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <br/>
+  <%= f.label :email, "Email Address" %>
+  <%= f.text_field :email %>
+  <br/>
+  <%= f.submit "Register User" %>
+<% end %>
