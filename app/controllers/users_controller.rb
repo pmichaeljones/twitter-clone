@@ -14,11 +14,11 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = "User Created"
-     #go to user's info page
-     redirect_to root_path
+      #go to user's info page
+      redirect_to root_path
     else
-     #render the register page again to fix errors
-     render :new
+      #render the register page again to fix errors
+       render :new
     end
 
   end

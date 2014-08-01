@@ -9,12 +9,11 @@ class StatusesController < ApplicationController
 
     @status = Status.new(status_params)
     #binding.pry
-    user = User.find(1)
-    @status.creator = user #TODO add authentication
+    @status.creator = current_user #TODO add authentication
 
     if @status.save
       flash[:notice] = "Status Created!"
-      redirect_to user_path(user.username)
+      redirect_to user_path(current_user.username)
     else
       flash[:notice] = "Hmmm, something went wrong."
       render :new
@@ -23,6 +22,7 @@ class StatusesController < ApplicationController
   end
 
   def destroy
+
   end
 
 
