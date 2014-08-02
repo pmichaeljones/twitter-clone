@@ -7,9 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'layouts/top_nav' %>
-<%= render 'layouts/flash_messages' %>
-<%= yield %>
-
+  <div class='container'>
+    <div class='jumbotron'>
+      <%= render 'layouts/top_nav' %>
+      <%= render 'layouts/flash_messages' %>
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,9 +1,32 @@
 <%= render 'shared/header', title: "User Profile Page" %>
 
-<%= link_to "@#{@user.username}", user_path(@user.username) %>
-
-<ul>
-  <% @user.statuses.each do |status| %>
-    <li><%= status.body %></li>
-  <% end %>
-</ul>
+<div class='container'>
+  <div class='col-sm-4'>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= link_to "@#{@user.username}", user_path(@user.username) %></h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <% @user.statuses.each do |status| %>
+            <li><%= status.body %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class='col-sm-8'>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">News Feed</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <% @user.statuses.each do |status| %>
+            <li><%= status.body %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

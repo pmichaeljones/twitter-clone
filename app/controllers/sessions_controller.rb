@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
       #binding.pry
       redirect_to user_path(@user.username)
     else
-      flash[:notice] = "Your Login Info in Not Valid"
+      flash[:error] = "Your Login Info in Not Valid"
       render :new
     end
 

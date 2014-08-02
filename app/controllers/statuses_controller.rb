@@ -1,4 +1,5 @@
 class StatusesController < ApplicationController
+  before_action :require_user, only: [:new, :create]
 
   def new
     @status = Status.new
@@ -15,7 +16,7 @@ class StatusesController < ApplicationController
       flash[:notice] = "Status Created!"
       redirect_to user_path(current_user.username)
     else
-      flash[:notice] = "Hmmm, something went wrong."
+      flash[:error] = "Hmmm, something went wrong."
       render :new
     end
 

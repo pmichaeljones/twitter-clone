@@ -1,5 +1,5 @@
-<h1>All Users</h1>
-</ul>
+<%= render 'shared/header', title: "All Users" %>
+<ul>
 <% @users.each do |user| %>
   <%= link_to user.username, user_path(user.username) %>
   <br/>
