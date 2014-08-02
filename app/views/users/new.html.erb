@@ -4,12 +4,21 @@
 <%= form_for @user do |f| %>
   <%= f.label :username %>
   <%= f.text_field :username %>
-  <br/>
+    <br/>
+  <%= f.label :first_name, "First Name" %>
+  <%= f.text_field :first_name %>
+    <br/>
+  <%= f.label :last_name, "Last Name" %>
+  <%= f.text_field :last_name %>
+    <br/>
+  <%= f.label :location, "City" %>
+  <%= f.text_field :location %>
+    <br/>
   <%= f.label :password %>
   <%= f.password_field :password %>
-  <br/>
+    <br/>
   <%= f.label :email, "Email Address" %>
   <%= f.text_field :email %>
-  <br/>
+    <br/>
   <%= f.submit "Register User" %>
 <% end %>

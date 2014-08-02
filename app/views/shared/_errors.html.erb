@@ -1,5 +1,5 @@
 <% if obj.errors.any? %>
-  <div class="alert alert-danger" role='alert'>
+  <div class="alert alert-danger alert-dismissible" role='alert'>
     <h5>There were some errors:</h5>
     <ul>
       <% obj.errors.full_messages.each do |msg| %>

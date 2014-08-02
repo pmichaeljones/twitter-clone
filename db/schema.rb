@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140731233005) do
+ActiveRecord::Schema.define(version: 20140802185036) do
 
   create_table "statuses", force: true do |t|
     t.text     "body"
@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(version: 20140731233005) do
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "location"
   end
 
 end

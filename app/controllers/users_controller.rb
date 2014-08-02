@@ -27,13 +27,14 @@ class UsersController < ApplicationController
   def show
     #binding.pry
     @user = User.find_by username: params[:username]
+    @statuses = Status.all
     #binding.pry
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :email)
+    params.require(:user).permit(:username, :first_name, :last_name, :location, :password, :email)
   end
 
 

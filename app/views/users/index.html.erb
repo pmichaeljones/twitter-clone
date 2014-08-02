@@ -1,7 +1,16 @@
 <%= render 'shared/header', title: "All Users" %>
-<ul>
-<% @users.each do |user| %>
-  <%= link_to user.username, user_path(user.username) %>
-  <br/>
-<% end %>
-</ul>
+  <% @users.each do |user| %>
+  <div class='col-sm'>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= link_to "@#{user.username}", user_path(user.username) %></h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <% user.statuses.first(4).each do |status| %>
+            <li><%= status.body %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
