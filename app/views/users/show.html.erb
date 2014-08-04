@@ -24,6 +24,7 @@
             <div class='well'>
               <%= status.body %>
               <br/>
+              <br/>
               <%= link_to "@"+ status.creator.username, user_path(status.creator.username) %>
             </div>
           <% end %>
